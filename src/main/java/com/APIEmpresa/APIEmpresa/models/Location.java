@@ -2,6 +2,9 @@ package com.APIEmpresa.APIEmpresa.models;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Getter
@@ -9,11 +12,14 @@ import javax.persistence.OneToMany;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Entity
 
 public class Location {
+
+    @Id
     private Long id;
-    @OneToMany
     private String description;
+    @ManyToOne
     private LevelAccess levelAccess;
 
 }

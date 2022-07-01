@@ -12,9 +12,8 @@ import javax.persistence.Id;
 @Builder
 @Entity
 
-public class LevelAccess {
+public class DateType {
     @Id
-    public long id;
+    private long id;
     private String description;
-
 }
